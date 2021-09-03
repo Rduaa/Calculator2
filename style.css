@@ -1,0 +1,128 @@
+::-webkit-scrollbar
+{
+	display: none;
+}
+
+:root,
+:root *
+{
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	appearance: none;
+	-webkit-touch-callout: none;
+	-webkit-tap-highlight-color: transparent;
+	-ms-overflow-style: none;
+	scrollbar: none;
+	box-sizing: border-box;
+	outline: none;
+	white-space: nowrap;
+	margin: 0;
+	padding: 0;
+}
+
+:root
+{
+	--background: #444453;
+	--calculator: #262633;
+	--output: #646474;
+	--button: #444453;
+	--button-pressed: #646474;
+}
+
+body
+{
+	background: var(--background);
+}
+
+.calculator
+{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(2,1fr);
+	position: fixed;
+	top: calc(50% - 9.25rem);
+	left: calc(50% - 10rem);
+	width: 20rem;
+	height: 18.5rem;
+	background: var(--calculator);
+	border: none;
+	border-radius: 1rem;
+}
+
+button,
+.output
+{
+	color: white;
+	font-family: "Avenir Next", Avenir, Arial;
+}
+
+.output
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: var(--output);
+	height: 4rem;
+	font-size: 1rem;
+	border: none;
+	border-radius: 0.3rem;
+	margin: 0.8rem!important;
+	overflow: hidden;
+}
+
+.result,
+.preresult
+{
+	display: block;
+	width: 100%;
+}
+
+.result
+{
+	font-size: 1.5rem;
+	padding: 0 0.3rem!important;
+}
+
+.preresult
+{
+	font-size: 0.8rem;
+	padding: 0 0.5rem!important;
+}
+
+.keyboard
+{
+	display: grid;
+	grid-template-columns: repeat(4,1fr);
+	grid-template-rows: repeat(4,1fr);
+	margin: 0 0.5rem 0.5rem 0.5rem!important;
+}
+
+button
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: var(--button);
+	font-size: 1.5rem;
+	border: none;
+	border-radius: 0.4rem;
+	margin: 0.2rem!important;
+	transition: background 200ms;
+}
+
+button.pressed
+{
+	background: var(--button-pressed);
+}
+
+button sup,
+button sub
+{
+	font-size: 0.4rem;
+}
